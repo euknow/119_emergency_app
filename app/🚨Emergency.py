@@ -343,7 +343,7 @@ with tab1:
 ## -------------------- ▼ 1-7그룹 중증 질환 선택 또는 예측 결과 표시 cols 구성 ▼ --------------------        
     url = 'https://github.com/euknow/Data/blob/main/Lightmodel?raw=true'   
     response = requests.get(url, stream=True)
-    model = pickle.load(response.raw)
+    lightgbm = pickle.load(response.raw)
     
     ## 모델 불러오기
     # lightgbm = pickle.load(open("C:/Users/User/박은호/KT AIVLE SCHOOL/미니프로젝트5/2일차/LightGBM", 'rb'))
@@ -571,8 +571,6 @@ with tab2:
         group_month = group_month.rename(columns={'ID' : '출동건수'})
         group_month = group_month.sort_values('출동건수', ascending=True)
         st.bar_chart(data=group_month, x='월별', y='출동건수', use_container_width=True)
-
-
 
     ## -------------------------------------------------------------------------------------------
 
