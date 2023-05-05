@@ -21,7 +21,8 @@ import googlemaps
 import polyline
 import time
 import urllib.request
-
+import lightgbm as lgb
+from lightgbm import LGBMClassifier
 
 url = "https://github.com/kimseongukk/python/raw/main/model.pickle"
 response = requests.get(url, stream=True)
