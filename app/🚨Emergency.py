@@ -24,9 +24,9 @@ import urllib.request
 import lightgbm as lgb
 from lightgbm import LGBMClassifier
 
-url = "https://github.com/kimseongukk/python/raw/main/model.pickle"
-response = requests.get(url, stream=True)
-lightgbm = pickle.load(response.raw)
+# url = "https://github.com/kimseongukk/python/raw/main/model.pickle"
+# response = requests.get(url, stream=True)
+# lightgbm = pickle.load(response.raw)
 
 def geocoding(address):
     geolocator = Nominatim(user_agent='eunho')
@@ -341,7 +341,9 @@ with tab1:
 
                 
 ## -------------------- ▼ 1-7그룹 중증 질환 선택 또는 예측 결과 표시 cols 구성 ▼ --------------------        
-    
+    url = 'https://github.com/euknow/Data/blob/main/Lightmodel?raw=true'   
+    response = requests.get(url, stream=True)
+    model = pickle.load(response.raw)
     
     ## 모델 불러오기
     # lightgbm = pickle.load(open("C:/Users/User/박은호/KT AIVLE SCHOOL/미니프로젝트5/2일차/LightGBM", 'rb'))
