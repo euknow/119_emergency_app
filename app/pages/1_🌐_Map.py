@@ -61,7 +61,7 @@ def google_chrome(patient, hospital):
 
 def geocoding(address):
     geolocator = Nominatim(user_agent='eunho')
-    location = geolocator.geocode(address)
+    location = geolocator.geocode(address, timeout=10)
     lati = location.latitude
     long = location.longitude
      
