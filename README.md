@@ -1,2 +1,2 @@
 # 119_emergency_app
-this is for project of value up
+This app has the ability to make paramedics to know where they can accommodate this patient's condition and where they can get to the fastest
